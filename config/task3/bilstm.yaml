@@ -1,0 +1,21 @@
+# Task 3: LM-assisted error correction using BiLSTM for masked-word filling
+cipher_files:
+  - data/cipher_00.txt
+  - data/cipher_01.txt
+  - data/cipher_02.txt
+  - data/cipher_03.txt
+  - data/cipher_04.txt
+plain: data/plain.txt
+correction_model: bilstm
+task1_model: rnn
+task1_ckpt: outputs/logs/task1_rnn_best.pt
+task1_meta: outputs/logs/task1_rnn_meta.json
+task2_ssm_ckpt: outputs/logs/task2_ssm_best.pt
+task2_ssm_meta: outputs/logs/task2_ssm_meta.json
+task2_bilstm_ckpt: outputs/logs/task2_bilstm_best.pt
+task2_bilstm_meta: outputs/logs/task2_bilstm_meta.json
+conf_threshold: 0.5
+output_dir: outputs
+seed: 42
+wandb_project: INLP_A3
+no_wandb: false
